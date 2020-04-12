@@ -1,6 +1,4 @@
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.util.Random;
 
@@ -54,9 +52,9 @@ public class Game extends Canvas implements Runnable {
             lastTime = now;
             while (delta >= 1 ) {
                 tick();
-                delta --;
+                delta--;
             }
-            if (running) {
+            if (running) 
                 render();
                 frames++;
 
@@ -70,7 +68,7 @@ public class Game extends Canvas implements Runnable {
 
             stop();
         }
-    }
+    
 
     private void tick() {
         handler.tick();
